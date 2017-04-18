@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="lisp.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>LISP</title>
+</head>
+<body>
+    <h2>History of Lisp:</h2>
+    <p>Orginally invented in 1958, by John McCarthy at MIT. Lisp is the second-oldest high-level programming language in widespread use today. Only Fortran is older by 1 year. It was originally created as a mathematical notation for computer programs. It quickly became the favored programming language for artificial intelligence research. The name LISP derives from "LISt processor". Linked lists are one of Lisp's major data structures, and Lisp source code is made of lists.</p>
+    <h2>Purpose:</h2>
+    <p>Lisp pioneered many ideas in computer science, including tree data structures, automatic storage management, dynamic typing, conditionals, higher-order functions, recursion, the self-hosting compiler, and the read-eval-print loop.</p>
+    <h2>Type:</h2>
+    <p>Lisp is a compiled functional language that can be interpreted. The Lisp family of languages are all "strong typed" in the sense that typing errors are prevented at runtime.</p>
+    <h2 class=>Example:</h2>
+    <p> (defparameter *small* 1) <br>
+        (defparameter *big* 100) <br>
+        <br>
+        (defun guess-my-number ()<br>
+            (ash (+ *small* *big*) -1))<br>
+        <br>                            
+        (defun smaller ()<br>
+            (setf *big* (1- (guess-my-number)))<br>
+            (guess-my-number))<br>
+
+        (defun bigger ()<br>
+            (setf *small* (1+ (guess-my-number)))<br>
+            (guess-my-number))<br>
+
+        (defun start-over ()<br>
+        (defparameter *small* 1)<br>
+        (defparameter *big* 100)<br>
+        (guess-my-number))</p>
+</body>
+</html>
